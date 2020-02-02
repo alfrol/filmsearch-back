@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS wishlist(
+    id SERIAL PRIMARY KEY ,
+    username VARCHAR(255) ,
+    film_id BIGINT
+) ENGINE=InnoDB DEFAULT CHAR SET=utf8;

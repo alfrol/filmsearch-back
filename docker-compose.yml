@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+    db:
+        image: mysql:latest
+        ports:
+            - 3307:3306
+        restart: always
+        environment:
+            MYSQL_DATABASE: films
+            MYSQL_USER: alan
+            MYSQL_PASSWORD: Anloba_And_Company_31
+            MYSQL_ROOT_PASSWORD: Jaan_Penjam_123

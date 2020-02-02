@@ -1,0 +1,39 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.9.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'ee.taltech'
+version = '1.0.0'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+bootJar {
+	mainClassName = 'ee.taltech.iti0203backend.Iti0203BackendApplication'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	compileOnly 'org.projectlombok:lombok'
+	testCompile 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+	testCompile 'org.mockito:mockito-junit-jupiter:2.23.0'
+	compile 'org.flywaydb:flyway-core'
+	runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
+	compile 'io.jsonwebtoken:jjwt:0.9.1'
+}

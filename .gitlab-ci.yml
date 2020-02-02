@@ -1,0 +1,43 @@
+stages:
+    - build
+    - test
+    - deploy
+
+before_script:
+    - export GRADLE_USER_HOW=`pwd`/.gradle
+    - chmod +x gradlew
+    - docker-compose up -d
+
+build iti0203-backend:
+    stage: build
+    image: node:11-alpine
+    cache:
+        paths:
+            - .gradle/wrapper
+            - .gradle/caches
+    artifacts:
+        paths:
+            - build/libs
+    tags:
+        - films-app
+    script:
+        - ./gradlew assemble
+
+test iti0203-backend:
+    stage: test
+    tags:
+        - films-app
+    script:
+        - ./gradlew check
+
+deploy iti0203-backend:
+    stage: deploy
+    only:
+        - master
+    tags:
+        - films-app
+    script:
+        - mkdir -p ~/api-deployment
+        - rm -rf ~/api-deployment/*
+        - cp -r build/libs/. ~/api-deployment
+        - sudo service films-app restart

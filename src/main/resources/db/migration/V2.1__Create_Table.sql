@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS films.film(
+    id SERIAL PRIMARY KEY ,
+    title VARCHAR(255) NOT NULL UNIQUE ,
+    producer VARCHAR(255) NOT NULL ,
+    plot MEDIUMTEXT NOT NULL ,
+    duration SMALLINT NOT NULL ,
+    release_date SMALLINT NOT NULL ,
+    genre VARCHAR(25) NOT NULL ,
+    age_rating VARCHAR(25) NOT NULL ,
+    image_path VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHAR SET=utf8;
