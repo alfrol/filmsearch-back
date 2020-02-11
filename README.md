@@ -10,7 +10,7 @@ To install our backend api to your server you need to follow some simple steps.
 ### Step 1: Clone the project
 
 First of all you will need to clone our project so that you can access all the necessary files, configs etc.
-To clone the project just copy the link and type `git clone https://gitlab.cs.ttu.ee/alfrol/iti0203-backend.git`
+To clone the project just copy the link and type `git clone https://github.com/alfrol/filmsearch-back.git`
 at the preferred location on your machine.
 
 ### Step 2: Get a server
@@ -124,7 +124,7 @@ check the status of the service just type `sudo service <name_of_the_service> st
 ### Step 8: Configure the frontend
 
 Now that you have successfully configured backend you will also have to perform some configuration with frontend.
-This guide can be found in the [frontend repository](https://gitlab.cs.ttu.ee/alfrol/iti0203-frontend).
+This guide can be found in the [frontend repository](https://github.com/alfrol/filmsearch-front).
 
 ## Developed By
 
