@@ -1,4 +1,4 @@
-# Team 2 Jackals | Java Project Backend
+# Java Project Backend
 
 This repository contains backend for Java project developed during the course
 **Information Systems Development in Java (ITI0203)** at TalTech.
